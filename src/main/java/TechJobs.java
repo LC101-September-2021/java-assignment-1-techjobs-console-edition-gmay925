@@ -1,10 +1,7 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 /**
- * Created by LaunchCode
+ * Created byLaunchCode
  */
 public class TechJobs {
 
@@ -19,6 +16,7 @@ public class TechJobs {
         columnChoices.put("location", "Location");
         columnChoices.put("position type", "Position Type");
         columnChoices.put("all", "All");
+
 
         // Top-level menu options
         HashMap<String, String> actionChoices = new HashMap<>();
@@ -59,7 +57,7 @@ public class TechJobs {
 
                 // What is their search term?
                 System.out.println("\nSearch term:");
-                String searchTerm = in.nextLine();
+                String searchTerm = in.nextLine().toLowerCase();
 
                 if (searchField.equals("all")) {
                     printJobs(JobData.findByValue(searchTerm));
@@ -120,6 +118,19 @@ public class TechJobs {
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
 
-        System.out.println("printJobs is not implemented yet");
+        if (someJobs.size() == 0) {
+            System.out.print("No Results");
+        }
+
+        for (HashMap<String, String> job : someJobs ) {
+            System.out.println("\n*****");
+            for (String i : job.keySet()) {
+                System.out.println(i + ": " + job.get(i));
+            }
+            System.out.println("*****");
+        }
+//
+
+       // System.out.println("printJobs is not implemented yet");
     }
 }
