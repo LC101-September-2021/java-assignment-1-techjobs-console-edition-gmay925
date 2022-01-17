@@ -86,7 +86,7 @@ public class JobData {
     }
 
     /**
-     * Search all columns for the given term
+     * Search all columns forthe given term
      *
      * @param value The search term to look for
      * @return      List of all jobs with at least one field containing the value

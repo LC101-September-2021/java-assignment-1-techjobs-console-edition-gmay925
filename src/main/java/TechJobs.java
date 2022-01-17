@@ -1,7 +1,7 @@
 import java.util.*;
 
 /**
- * Created by LaunchCode
+ * Created byLaunchCode
  */
 public class TechJobs {
 
